@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。网上说是源文件的问题，就改了源文件。if(this._marker){  this._div.style.left = pixel.x - icon.anchor.width + this._marker">
+<meta name="description" content="1.百度地图之infoBox偏移量因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。网上说是源文件的问题，就改了源文件。if(this._marker){  this._div.style.left = pixel.x - icon.anchor.wid">
 <meta name="keywords" content="百度地图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="百度地图之infoBox偏移量">
+<meta property="og:title" content="百度地图">
 <meta property="og:url" content="http://yoursite.com/2018/07/25/百度地图之infoBox偏移量/index.html">
 <meta property="og:site_name" content="白小白">
-<meta property="og:description" content="因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。网上说是源文件的问题，就改了源文件。if(this._marker){  this._div.style.left = pixel.x - icon.anchor.width + this._marker.getOffset().width + icon.infoWindowAnch">
+<meta property="og:description" content="1.百度地图之infoBox偏移量因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。网上说是源文件的问题，就改了源文件。if(this._marker){  this._div.style.left = pixel.x - icon.anchor.width + this._marker.getOffset().width + ic">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-25T02:18:34.010Z">
+<meta property="og:updated_time" content="2018-07-30T06:22:30.088Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="百度地图之infoBox偏移量">
-<meta name="twitter:description" content="因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。网上说是源文件的问题，就改了源文件。if(this._marker){  this._div.style.left = pixel.x - icon.anchor.width + this._marker.getOffset().width + icon.infoWindowAnch">
+<meta name="twitter:title" content="百度地图">
+<meta name="twitter:description" content="1.百度地图之infoBox偏移量因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。网上说是源文件的问题，就改了源文件。if(this._marker){  this._div.style.left = pixel.x - icon.anchor.width + this._marker.getOffset().width + ic">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>百度地图之infoBox偏移量 | 白小白</title>
+  <title>百度地图 | 白小白</title>
   
 
 
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">百度地图之infoBox偏移量</h1>
+          <h1 class="post-title" itemprop="name headline">百度地图</h1>
         
 
         <div class="post-meta">
@@ -330,7 +330,7 @@
       
 
       
-        <p>因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。<br>网上说是源文件的问题，就改了源文件。<br><code>if(this._marker){
+        <p>1.百度地图之infoBox偏移量<br>因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。<br>网上说是源文件的问题，就改了源文件。<br><code>if(this._marker){
  this._div.style.left = pixel.x - icon.anchor.width + this._marker.getOffset().width + icon.infoWindowAnchor.width - this._boxWidth / 2 + &quot;px&quot;;
  }else{
  this._div.style.left = pixel.x - this._boxWidth / 2 + &quot;px&quot;;
@@ -338,8 +338,13 @@
  this._div.style.left = pixel.x - icon.anchor.width + this._marker.getOffset().width + icon.infoWindowAnchor.width - this._boxWidth / 2 + &quot;px&quot;;
  }else{
  this._div.style.left = pixel.x - this._boxWidth / 2 + &quot;px&quot;;
- }</code></p>
-<p> 百度地图 JavaScript 开源库 ：<a href="http://lbsyun.baidu.com/index.php?title=open/library" target="_blank" rel="noopener">http://lbsyun.baidu.com/index.php?title=open/library</a><br> 包含 大数据可视化库，热力图，城市商圈及行政区域等等<br> 开源库的api ：<a href="http://api.map.baidu.com/library/InfoBox/1.2/docs/symbols/BMapLib.InfoBox.html" target="_blank" rel="noopener">http://api.map.baidu.com/library/InfoBox/1.2/docs/symbols/BMapLib.InfoBox.html</a></p>
+ }</code><br>2.百度地图之去掉百度logo<br>.anchorBL{<br>display:none<br>}<br>3.百度地图之点击地图关闭infoBox<br><code>map.addEventListener(&quot;click&quot;, that.showInfo);</code><br><code>showInfo= (e)=&gt;{
+    var that = this;
+    console.log(e)
+    if (that.state.infoBoxTemp) {
+      that.state.infoBoxTemp.close();
+    }
+  };</code><br> 百度地图 JavaScript 开源库 ：<br> <code>http://lbsyun.baidu.com/index.php?title=open/library</code> （包含 大数据可视化库，热力图，城市商圈及行政区域等等）<br> 开源库的api ：<br> <code>http://api.map.baidu.com/library/InfoBox/1.2/docs/symbols/BMapLib.InfoBox.html</code></p>
 
       
     </div>
