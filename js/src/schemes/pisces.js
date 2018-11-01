@@ -45,7 +45,7 @@ $(document).ready(function () {
   }
 
   function setSidebarMarginTop (headerOffset) {
-    return $('#sidebar').css({ 'margin-top': 0 });
+    return $('#sidebar').css({ 'margin-top': headerOffset });
   }
 
   function recalculateAffixPosition () {
