@@ -1,6 +1,3 @@
-/**
- * Created by xiaobai on 2018/10/31.
- */
 (function(window,document,undefined){
   var hearts = [];
   window.requestAnimationFrame = (function(){
@@ -66,4 +63,4 @@
   function randomColor(){
     return "rgb("+(~~(Math.random()*255))+","+(~~(Math.random()*255))+","+(~~(Math.random()*255))+")";
   }
-})(window,document)
+})(window,document);
