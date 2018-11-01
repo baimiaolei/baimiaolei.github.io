@@ -448,24 +448,14 @@
 
       
         
-          
-            <p>1.百度地图之infoBox偏移量<br>因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。<br>网上说是源文件的问题，就改了源文件。<br><code>if(this._marker){
- this._div.style.left = pixel.x - icon.anchor.width + this._marker.getOffset().width + icon.infoWindowAnchor.width - this._boxWidth / 2 + &quot;px&quot;;
- }else{
- this._div.style.left = pixel.x - this._boxWidth / 2 + &quot;px&quot;;
- }</code><br>修改为（注意这句 <code>this._opts.offset.width</code> ）<br><code>if(this._marker){
- this._div.style.left = pixel.x - icon.anchor.width + this._marker.getOffset().width + icon.infoWindowAnchor.width - this._boxWidth / 2 + &quot;px&quot;;
- }else{
- this._div.style.left = pixel.x - this._boxWidth / 2 + &quot;px&quot;;
- }</code><br>2.百度地图之去掉百度logo<br>.anchorBL{<br>display:none<br>}<br>3.百度地图之点击地图关闭infoBox<br><code>map.addEventListener(&quot;click&quot;, that.showInfo);</code><br><code>showInfo= (e)=&gt;{
-    var that = this;
-    console.log(e)
-    if (that.state.infoBoxTemp) {
-      that.state.infoBoxTemp.close();
-    }
-  };</code><br> 百度地图 JavaScript 开源库 ：<br> <a href="http://lbsyun.baidu.com/index.php?title=open/library" target="_blank" rel="noopener">http://lbsyun.baidu.com/index.php?title=open/library</a> （包含 大数据可视化库，热力图，城市商圈及行政区域等等）<br> 开源库的api ：<br> <a href="http://api.map.baidu.com/library/InfoBox/1.2/docs/symbols/BMapLib.InfoBox.html" target="_blank" rel="noopener">http://api.map.baidu.com/library/InfoBox/1.2/docs/symbols/BMapLib.InfoBox.html</a></p>
-
-          
+          <p>1.百度地图之infoBox偏移量<br>因为百度自带的infoWindow不好看，需要个性化定制，然后就用了infoBox. 但是水平方向的偏移量设置不了。<br>网上说是源文件的问题，就改了源文件。<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/25/百度地图之infoBox偏移量/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -582,12 +572,14 @@
 
       
         
-          
-            <p>我又来啦。<br>页面加载慢，需要做按需加载，万万没想到，react-router4的按需加载，不能用webpack以往<br><code>const index = r =&gt; require.ensure([], () =&gt; r(require(&#39;../components/index&#39;)), &#39;index&#39;)</code><br>然后，查资料，提供了一个思路，使用bundle,但是出现了一个问题，this.props.history,找不到。。。<br>后来找到一个方法，使用withRouter,可是我看不懂，也不会用。<br>算了，不废话了，祭出终级神器，<code>prop-types</code><br>这个可以用<code>npm install prop-types</code> 安装.<br>然后在需要使用this.props.history的界面，在constructor上面这样写：<br>  <code>static contextTypes = {
-    router: PropTypes.object.isRequired
-  };</code><br>然后使用 this.context.router.history  就可以跳转了 ^_^ ~</p>
-
-          
+          <p>我又来啦。<br>页面加载慢，需要做按需加载，万万没想到，react-router4的按需加载，不能用webpack以往<br><code>const index = r =&gt; require.ensure([], () =&gt; r(require(&#39;../components/index&#39;)), &#39;index&#39;)</code><br>然后，查资料，提供了一个思路，使用bundle,但是出现了一个问题，this.props.history,找不到。。。<br>后来找到一个方法，使用withRouter,可是我看不懂，也不会用。<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/24/react-按需加载/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -704,15 +696,14 @@
 
       
         
-          
-            <p> <code>&lt;input type=&quot;file&quot; id=&quot;file&quot; /&gt;</code><br>1.鼠标一直不能变成pointer ,百度之后发现，需要设置font-size:0<br>2.选择接受文件的类型  添加accept属性  例如：accept=”image/*”，接受所有图片类型的文件<br>3.多文件上传 添加 multiple=”multiple”</p>
-<p>布局：<br> <code>&lt;div className=&quot;uploadWarpper&quot;&gt;
-      &lt;input type=&quot;file&quot; id=&quot;file&quot; multiple=&quot;multiple&quot; accept=&quot;image/*&quot; /&gt;
-      &lt;p className=&quot;uploadImg&quot;&gt;&lt;/p&gt;
- &lt;/div&gt;</code><br> 外层relative定位，input和p标签 absolute 定位，input的z-index比p标签高一点<br> p标签内部放图片<br> css:<br> .uploadWarpper{<br>     width: 200px;<br>     height: 200px;<br>     position: relative;<br>     margin-right:15px;<br>     float: left;<br> }</p>
-<p> #file{<br>     cursor: pointer;<br>     opacity: 0;<br>     position: absolute;<br>     z-index: 2;<br>     width: 200px;<br>     height: 200px;<br> }<br> .uploadImg{<br>     cursor: pointer;<br>     position: absolute;<br>     width: 200px;<br>     height: 200px;<br>     z-index: 1;<br>     border:1px dashed #dfdfdf;<br> }<br> .uploadImg:after{<br>   content:’+’;<br>     font-size: 60px;<br>     color:#dfdfdf;<br>     display: inline-block;<br>     width: 100%;<br>     line-height: 200px;<br>     text-align: center;<br> }<br> <img src="/2018/07/19/小方法/gongzhonghao.jpg" alt="我的公众号"><br> 扫一扫，关注公众号</p>
-
-          
+          <p> <code>&lt;input type=&quot;file&quot; id=&quot;file&quot; /&gt;</code><br>1.鼠标一直不能变成pointer ,百度之后发现，需要设置font-size:0<br>2.选择接受文件的类型  添加accept属性  例如：accept=”image/<em>“，接受所有图片类型的文件<br>3.多文件上传 添加 multiple=”multiple”<br></em></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/19/小方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1409,23 +1400,14 @@
 
       
         
-          
-            <h3 id="hexo–图片的引入"><a href="#hexo–图片的引入" class="headerlink" title="hexo–图片的引入"></a>hexo–图片的引入</h3><p>上面有一片数组循环的文章，我当时想引入自己作的思维导图，但是不懂markdown语法 ，不知道如何引入。上网搜索一番，总共有两个方法<br>1.用插件<br> 安装  npm install hexo-asset-image –save<br>2.不用插件<br> 首先 hexo new “XXX”<br> 使用完命令之后，在source/_post文件夹里面就会出现一个“XXX.md”的文件和一个“XXX”的文件夹。<br> 把需要引入的图片放入文件夹中<br> 然后在页面使用<br><code>![](XXX/XXX.png)</code>  就可以了</p>
-<p>差点忘了，不论你使用插件还是不使用插件，你都需要修改_config.yml配置文件post_asset_folder项为true。</p>
-<h3 id="hexo-如何删除文章"><a href="#hexo-如何删除文章" class="headerlink" title="hexo  如何删除文章"></a>hexo  如何删除文章</h3><ul>
-<li>本地删除</li>
-<li>使用命令<br><code>hexo g</code><br><code>hexo d</code><br>就可以了</li>
-</ul>
-<h3 id="hexo-发布文章"><a href="#hexo-发布文章" class="headerlink" title="hexo  发布文章"></a>hexo  发布文章</h3><ul>
-<li>使用命令<br><code>hexo d -g</code></li>
-</ul>
-<h3 id="hexo-更新文章没变化的时候"><a href="#hexo-更新文章没变化的时候" class="headerlink" title="hexo  更新文章没变化的时候"></a>hexo  更新文章没变化的时候</h3><ul>
-<li>手动删除 .deploy_git</li>
-<li>执行<code>hexo clean</code></li>
-<li><code>hexo d -g</code>  就可以了</li>
-</ul>
-
-          
+          <h3 id="hexo–图片的引入"><a href="#hexo–图片的引入" class="headerlink" title="hexo–图片的引入"></a>hexo–图片的引入</h3><p>上面有一片数组循环的文章，我当时想引入自己作的思维导图，但是不懂markdown语法 ，不知道如何引入。上网搜索一番，总共有两个方法<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/24/hexo基础/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
