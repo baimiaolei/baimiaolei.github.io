@@ -88,12 +88,10 @@
 <meta property="og:site_name" content="白小白">
 <meta property="og:description" content="&amp;lt;input type=&amp;quot;file&amp;quot; id=&amp;quot;file&amp;quot; /&amp;gt;1.鼠标一直不能变成pointer ,百度之后发现，需要设置font-size:02.选择接受文件的类型  添加accept属性  例如：accept=”image/“，接受所有图片类型的文件3.多文件上传 添加 multiple=”multiple”">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/07/19/小方法/gongzhonghao.jpg">
-<meta property="og:updated_time" content="2018-11-01T02:14:04.047Z">
+<meta property="og:updated_time" content="2018-11-06T03:00:56.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有关type=file的问题">
 <meta name="twitter:description" content="&amp;lt;input type=&amp;quot;file&amp;quot; id=&amp;quot;file&amp;quot; /&amp;gt;1.鼠标一直不能变成pointer ,百度之后发现，需要设置font-size:02.选择接受文件的类型  添加accept属性  例如：accept=”image/“，接受所有图片类型的文件3.多文件上传 添加 multiple=”multiple”">
-<meta name="twitter:image" content="http://yoursite.com/2018/07/19/小方法/gongzhonghao.jpg">
 
 
 
@@ -333,7 +331,7 @@
 
       
         <p> <code>&lt;input type=&quot;file&quot; id=&quot;file&quot; /&gt;</code><br>1.鼠标一直不能变成pointer ,百度之后发现，需要设置font-size:0<br>2.选择接受文件的类型  添加accept属性  例如：accept=”image/<em>“，接受所有图片类型的文件<br>3.多文件上传 添加 multiple=”multiple”<br><a id="more"></a><br>布局：<br> `<div classname="uploadWarpper"><br>      &lt;input type=”file” id=”file” multiple=”multiple” accept=”image/</div></em>“ /&gt;<br>      </p><p classname="uploadImg"></p><br> `<br> 外层relative定位，input和p标签 absolute 定位，input的z-index比p标签高一点<br> p标签内部放图片<br> css:<br> .uploadWarpper{<br>     width: 200px;<br>     height: 200px;<br>     position: relative;<br>     margin-right:15px;<br>     float: left;<br> }<p></p>
-<p> #file{<br>     cursor: pointer;<br>     opacity: 0;<br>     position: absolute;<br>     z-index: 2;<br>     width: 200px;<br>     height: 200px;<br> }<br> .uploadImg{<br>     cursor: pointer;<br>     position: absolute;<br>     width: 200px;<br>     height: 200px;<br>     z-index: 1;<br>     border:1px dashed #dfdfdf;<br> }<br> .uploadImg:after{<br>   content:’+’;<br>     font-size: 60px;<br>     color:#dfdfdf;<br>     display: inline-block;<br>     width: 100%;<br>     line-height: 200px;<br>     text-align: center;<br> }<br> <img src="/2018/07/19/小方法/gongzhonghao.jpg" alt="我的公众号"><br> 扫一扫，关注公众号</p>
+<p> #file{<br>     cursor: pointer;<br>     opacity: 0;<br>     position: absolute;<br>     z-index: 2;<br>     width: 200px;<br>     height: 200px;<br> }<br> .uploadImg{<br>     cursor: pointer;<br>     position: absolute;<br>     width: 200px;<br>     height: 200px;<br>     z-index: 1;<br>     border:1px dashed #dfdfdf;<br> }<br> .uploadImg:after{<br>   content:’+’;<br>     font-size: 60px;<br>     color:#dfdfdf;<br>     display: inline-block;<br>     width: 100%;<br>     line-height: 200px;<br>     text-align: center;<br> }</p>
 
       
     </div>
@@ -348,7 +346,7 @@
        <div>
     
          <div><img src="https://s1.ax1x.com/2018/11/05/ioSImj.jpg" alt="ioSImj.jpg" border="0" /></div>
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------扫一扫<i class="fa fa-paw"></i>关注公众号-------------</div>
     
 </div>
 
