@@ -330,12 +330,14 @@
 
       
         
-          
-            <p>最近在做一个有上传功能的页面，遇到一个有意思的问题<br>根据后台给的参数上传模式，formData.我在上传的时候就设置<code>Content-type:application/x-www-form-urlencoded</code><br>结果报错了,说应该是 <code>multipart/form-data</code>  这个.<br>然后我改成 <code>Content-type:multipart/form-data</code>,又报错了！<br>报错信息：<code>the request was rejected because no multipart boundary was found</code><br>不知道 <code>no multipart boundary</code>是什么,网上搜到说是不需要设置Content-type.就可以了,试了下，ok?!<br>问题讨论：post请求Content-type到底该不该设置<br>我得出的结论是，要正确设置。fetch 发送post字符类请求时，</p>
-<p>(1)非文件上传时:无关你发送的数据格式是application/x-www-form-urlencoded或者application/json格式数据，你不设置请求头，fetch会给你默认加上一个Content-type = text/xml类型的请求头，有些第三方JAX可以自己识别发送的数据，并自己转换，但feth绝对不会，不行，你可以试一下；</p>
-<p>(2)文件上传请求时:因为不知道那个boundary的定义方式，所以就如建议的一样，我们不设置Content-type。</p>
-
-          
+          <p>最近在做一个有上传功能的页面，遇到一个有意思的问题<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/07/post上传文件的contentType设置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -456,15 +458,14 @@
 
       
         
-          
-            <p>1.git push 时每次需要输用户名和密码<br>问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码<br>原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库<br>查看使用的传输协议：<br>  <code>git remote -v</code><br>重新设置成ssh的方式：<br>    <code>git remote rm origin
-    git remote add origin git@github.com:username/repository.git
-    git push -u origin master</code><br>2.git命令行添加文件夹及目录<br>    <code>git add 文件夹/</code><br>    <code>git add 文件名.文件类型</code></p>
-<ol>
-<li>git添加远程仓库<br><code>git remote add origin git@github.com:username/repository.git</code><br>4.推送到远程仓库<br> 第一次推送到远程仓，-u的意思是Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。<br> <code>git push -u origin master</code><br>5.将本地文件推送到远程仓库的步骤<br> <code>git add 文件名.文件类型</code><br> <code>git commit -m &#39;修改信息&#39;</code><br> <code>git push origin master</code></li>
-</ol>
-
-          
+          <p>1.git push 时每次需要输用户名和密码<br>问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码<br>原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库<br>查看使用的传输协议：<br>  <code>git remote -v</code><br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/06/git-push时每次需要输密码/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
