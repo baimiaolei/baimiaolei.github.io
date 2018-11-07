@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库查看使用的传输协议：  git remote -v重新设置成ssh的方式：    git remote rm orig">
+<meta name="description" content="1.git push 时每次需要输用户名和密码问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库查看使用的传输协议：  git remote -v重新设置成ssh的方式">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git push时每次需要输密码">
+<meta property="og:title" content="git 相关问题（持续更新）">
 <meta property="og:url" content="http://yoursite.com/2018/11/06/git-push时每次需要输密码/index.html">
 <meta property="og:site_name" content="白小白">
-<meta property="og:description" content="问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库查看使用的传输协议：  git remote -v重新设置成ssh的方式：    git remote rm origin    git remote add origin git@github.c">
+<meta property="og:description" content="1.git push 时每次需要输用户名和密码问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库查看使用的传输协议：  git remote -v重新设置成ssh的方式：    git remote rm origin     git remote">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-06T09:37:38.056Z">
+<meta property="og:updated_time" content="2018-11-07T00:58:44.386Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git push时每次需要输密码">
-<meta name="twitter:description" content="问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库查看使用的传输协议：  git remote -v重新设置成ssh的方式：    git remote rm origin    git remote add origin git@github.c">
+<meta name="twitter:title" content="git 相关问题（持续更新）">
+<meta name="twitter:description" content="1.git push 时每次需要输用户名和密码问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库查看使用的传输协议：  git remote -v重新设置成ssh的方式：    git remote rm origin     git remote">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>git push时每次需要输密码 | 白小白</title>
+  <title>git 相关问题（持续更新） | 白小白</title>
   
 
 
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git push时每次需要输密码</h1>
+          <h1 class="post-title" itemprop="name headline">git 相关问题（持续更新）</h1>
         
 
         <div class="post-meta">
@@ -331,7 +331,12 @@
       
 
       
-        <p>问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码<br>原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库<br>查看使用的传输协议：<br>  <code>git remote -v</code><br>重新设置成ssh的方式：<br>    git remote rm origin<br>    git remote add origin git@github.comLusername/repository.git<br>    git push -u origin master</p>
+        <p>1.git push 时每次需要输用户名和密码<br>问题：换了个ssh key,发现每次git push origin master的时候都要输入用户名和密码<br>原因: 在添加远程库的时候使用了https的方式,所以每次都要用https的方式push到远程库<br>查看使用的传输协议：<br>  <code>git remote -v</code><br>重新设置成ssh的方式：<br>    <code>git remote rm origin
+    git remote add origin git@github.com:username/repository.git
+    git push -u origin master</code><br>2.git命令行添加文件夹及目录<br>    <code>git add 文件夹/</code><br>    <code>git add 文件名.文件类型</code></p>
+<ol>
+<li>git添加远程仓库<br><code>git remote add origin git@github.com:username/repository.git</code><br>4.推送到远程仓库<br> 第一次推送到远程仓，-u的意思是Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。<br> <code>git push -u origin master</code><br>5.将本地文件推送到远程仓库的步骤<br> <code>git add 文件名.文件类型</code><br> <code>git commit -m &#39;修改信息&#39;</code><br> <code>git push origin master</code></li>
+</ol>
 
       
     </div>
